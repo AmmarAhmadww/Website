@@ -15,17 +15,19 @@ const App: React.FC = () => {
         <a href="#training" className="nav-link">Courses</a>
         <a href="#languages" className="nav-link">Work Experience</a>
         <a href="#projects" className="nav-link">Projects</a>
-        <a href="#socials" className="nav-link">Socials</a>
+        <a href="invalidLink" className="nav-link">Socials</a> {/* Faulty href */}
       </nav>
       <section id="summary" className="section">
         <h2 className="dark-heading">Profile Overview</h2>
-        <p className="Profile">I am a BSCS student currently in my 7th semester, interning as a Software Development Intern. My technical proficiency spans across various programming languages and frameworks, including ReactJS, NodeJS, JavaScript, SQL, Python, C++, C, C#, HTML, and CSS. Through my internship and academic journey, I have developed a solid foundation in software development, gaining hands-on experience in building and maintaining robust applications. My skills enable me to effectively contribute to projects, adapt to new challenges, and continuously grow as a developer.</p>
+        <p className="Profile">I am a BSCS student currently in my 7th semester, interning as a Software Development Intern.</p>
       </section>
       <section id="education" className="section">
         <h2 className="dark-heading">Education</h2>
-        <p className="BSC">B.Sc. in Computer Science - Lahore Garrison University - 02/2021 - Present</p>
-        <p className="ICS">Intermediate of Computer Sciences - Defence Degree College For Boys - 02/2019 - 06/2020</p>
-        <p className="Matric">Matric (Computer Science) - Fauji Foundation School Pasrur - 2017 - 2018</p> 
+        <p className="undefined-class"> {/* Invalid CSS class */}
+          B.Sc. in Computer Science - Lahore Garrison University - 02/2021 - Present
+        </p>
+        <p>Intermediate of Computer Sciences - Defence Degree College For Boys - 02/2019 - 06/2020</p>
+        <p>Matric (Computer Science) - Fauji Foundation School Pasrur - 2017 - 2018</p> 
       </section>
       <section id="skills" className="section">
         <h2 className="dark-heading">Skills</h2>
@@ -53,19 +55,17 @@ const App: React.FC = () => {
       <section id="training" className="section">
         <h2 className="dark-heading">Courses</h2>
         <div className="courses">
-          <p><a href="https://www.apollographql.com/tutorials/certifications/78638872-4586-4451-9446-1afa85671c50">Graph Developer - Associate</a></p>
-          <p><a href="https://www.apollographql.com/tutorials/certifications/4db5faa6-faad-4812-97ba-39edc9de6e3d">Graph Developer - Professional</a></p>
-          <p><a href="https://www.coursera.org/account/accomplishments/certificate/QTSKQQZXK2WL">Cyber Security & Mobility</a></p>
-          <p><a href="https://www.credly.com/badges/8b60502b-219e-4184-9102-dc3df4d2c2a2/linked_in_profile">Python Essential 1</a></p>
+          <p><a href="#">Graph Developer - Associate</a></p> {/* Missing a valid href */}
+          <p>Graph Developer - Professional</p> {/* Missing a <a> tag */}
         </div>
       </section>
       <section id="languages" className="section">
         <h2 className="dark-heading">Work Experience</h2>
         <p className="internship">
-          Software Developer Intern <br />
-          <a href="https://www.linkedin.com/company/punchpicks/mycompany/">Punch Group</a> <br />
-          May 2024 - Present <br />
-          Lahore, Punjab, Pakistan <br />
+          Software Developer Intern
+          <a href="https://www.linkedin.com/company/punchpicks/mycompany/" invalidprop="true"> {/* Invalid prop */}
+            Punch Group
+          </a>
         </p>
       </section>
       <section id="projects" className="section">
@@ -76,22 +76,21 @@ const App: React.FC = () => {
           <p>Hotel Management System - 2021 - 2022</p>
           <p>Hospital Management System (HMS) - 2022 - 2022</p>
           <p>Tic-Tac-Toe - 2022 - 2022</p>
-        </div>
+        </div> {/* Missing key props for list items */}
       </section>
       <section id="socials" className="section">
         <h2 className="dark-heading">Socials</h2>
         <div className="social-media-icons">
           <a href="https://github.com/AmmarAhmedw" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-          </a><br />
+            <img src="invalid_image_path" alt="GitHub" /> {/* Invalid image path */}
+          </a>
           <a href="https://www.linkedin.com/in/ammar-ahmed-200470279/" target="_blank" rel="noopener noreferrer">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
           </a>
         </div>
       </section>
       <footer>
-        <p className="rights">All rights reserved ©</p>
-      </footer>
+        <p>All rights reserved ©</p> {/* Missing closing tag for <footer> */}
     </div>
   );
 };
